@@ -8,14 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
 namespace StudentBook
 {
-    public partial class Form1 : Form
+    public partial class FormError : Form
     {
-        public Form1()
+        public FormError()
         {
             InitializeComponent();
+        }
+
+        private void okButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
