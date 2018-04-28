@@ -34,6 +34,8 @@ namespace StudentBook
             this.studentName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.studentGroup = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.buttonAdd = new System.Windows.Forms.Button();
+            this.editButton = new System.Windows.Forms.Button();
+            this.deleteButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // studentList
@@ -71,12 +73,32 @@ namespace StudentBook
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
+            // editButton
+            // 
+            this.editButton.Location = new System.Drawing.Point(140, 13);
+            this.editButton.Name = "editButton";
+            this.editButton.Size = new System.Drawing.Size(121, 58);
+            this.editButton.TabIndex = 2;
+            this.editButton.Text = "Изменить";
+            this.editButton.UseVisualStyleBackColor = true;
+            // 
+            // deleteButton
+            // 
+            this.deleteButton.Location = new System.Drawing.Point(613, 12);
+            this.deleteButton.Name = "deleteButton";
+            this.deleteButton.Size = new System.Drawing.Size(121, 58);
+            this.deleteButton.TabIndex = 3;
+            this.deleteButton.Text = "Удалить";
+            this.deleteButton.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(746, 788);
+            this.Controls.Add(this.deleteButton);
+            this.Controls.Add(this.editButton);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.studentList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -93,6 +115,8 @@ namespace StudentBook
         private System.Windows.Forms.ColumnHeader studentGroup;
         private System.Windows.Forms.Button buttonAdd;
         public System.Windows.Forms.ListView studentList;
+        private System.Windows.Forms.Button editButton;
+        private System.Windows.Forms.Button deleteButton;
     }
 }
 
