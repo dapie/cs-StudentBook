@@ -20,7 +20,7 @@ namespace StudentBook
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            var addForm = new FormAdd();
+            var addForm = new FormAdd(this);
             addForm.ShowDialog();
         }
     }

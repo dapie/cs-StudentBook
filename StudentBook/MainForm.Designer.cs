@@ -45,7 +45,6 @@ namespace StudentBook
             this.studentList.GridLines = true;
             this.studentList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.studentList.Location = new System.Drawing.Point(12, 77);
-            this.studentList.MultiSelect = false;
             this.studentList.Name = "studentList";
             this.studentList.Size = new System.Drawing.Size(722, 699);
             this.studentList.TabIndex = 0;
@@ -72,7 +71,7 @@ namespace StudentBook
             this.buttonAdd.UseVisualStyleBackColor = true;
             this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,7 +81,7 @@ namespace StudentBook
             this.Controls.Add(this.studentList);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.ShowIcon = false;
             this.Text = "Список студентов";
             this.ResumeLayout(false);
@@ -90,11 +89,10 @@ namespace StudentBook
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView studentList;
         private System.Windows.Forms.ColumnHeader studentName;
         private System.Windows.Forms.ColumnHeader studentGroup;
         private System.Windows.Forms.Button buttonAdd;
+        public System.Windows.Forms.ListView studentList;
     }
 }
 

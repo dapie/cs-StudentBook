@@ -12,9 +12,11 @@ namespace StudentBook
 {
     public partial class FormAdd : Form
     {
-        public FormAdd()
+        MainForm mainForm;
+        public FormAdd(MainForm mForm)
         {
             InitializeComponent();
+            mainForm = mForm;
         }
 
         private void addButton_Click(object sender, EventArgs e)
@@ -23,6 +25,22 @@ namespace StudentBook
             {
                 var addForm = new FormError();
                 addForm.ShowDialog();
+                return;
+            }
+            else
+            {
+                var item = new ListViewItem(nameTextBox.Text);
+                item.SubItems.Add(groupTextBox.Text);
+                mainForm.studentList.Items.Add(item);
+                this.Close();
+            }
+        }
+
+        private void groupTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                addButton_Click(this, new EventArgs());
             }
         }
     }

@@ -50,6 +50,7 @@
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Size = new System.Drawing.Size(211, 26);
             this.nameTextBox.TabIndex = 1;
+            this.nameTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.groupTextBox_KeyDown);
             // 
             // groupTextBox
             // 
@@ -57,6 +58,7 @@
             this.groupTextBox.Name = "groupTextBox";
             this.groupTextBox.Size = new System.Drawing.Size(211, 26);
             this.groupTextBox.TabIndex = 3;
+            this.groupTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.groupTextBox_KeyDown);
             // 
             // labelGroup
             // 
