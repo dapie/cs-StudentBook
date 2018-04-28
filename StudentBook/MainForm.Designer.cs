@@ -44,9 +44,11 @@ namespace StudentBook
             this.studentList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.studentName,
             this.studentGroup});
+            this.studentList.FullRowSelect = true;
             this.studentList.GridLines = true;
-            this.studentList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.studentList.Location = new System.Drawing.Point(12, 77);
+            this.studentList.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.studentList.MultiSelect = false;
             this.studentList.Name = "studentList";
             this.studentList.Size = new System.Drawing.Size(722, 699);
             this.studentList.TabIndex = 0;
@@ -61,7 +63,7 @@ namespace StudentBook
             // studentGroup
             // 
             this.studentGroup.Text = "Группа";
-            this.studentGroup.Width = 500;
+            this.studentGroup.Width = 100;
             // 
             // buttonAdd
             // 
