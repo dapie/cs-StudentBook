@@ -12,9 +12,10 @@ namespace StudentBook
 {
     public partial class FormError : Form
     {
-        public FormError()
+        public FormError(string er)
         {
             InitializeComponent();
+            label.Text = er;
         }
 
         private void okButton_Click(object sender, EventArgs e)

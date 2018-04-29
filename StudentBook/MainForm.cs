@@ -23,5 +23,29 @@ namespace StudentBook
             var addForm = new FormAdd(this);
             addForm.ShowDialog();
         }
+
+        private void editButton_Click(object sender, EventArgs e)
+        {
+            foreach(ListViewItem student in studentList.Items)
+            {
+                if (student.Selected)
+                {
+                    return;
+                }
+            }
+            var addForm = new FormError("Ничего не выделено!");
+            addForm.ShowDialog();
+        }
+
+        private void deleteButton_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem student in studentList.Items)
+            {
+                if (student.Selected)
+                {
+                    studentList.Items.Remove(student);
+                }
+            }
+        }
     }
 }

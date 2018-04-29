@@ -10,16 +10,14 @@ using System.Windows.Forms;
 
 namespace StudentBook
 {
-    public partial class FormAdd : Form
+    public partial class FormEdit : Form
     {
-        MainForm mainForm;
-        public FormAdd(MainForm mForm)
+        public FormEdit()
         {
             InitializeComponent();
-            mainForm = mForm;
         }
 
-        private void addButton_Click(object sender, EventArgs e)
+        private void editButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(nameTextBox.Text) || string.IsNullOrEmpty(groupTextBox.Text))
             {
@@ -31,16 +29,8 @@ namespace StudentBook
             {
                 var item = new ListViewItem(nameTextBox.Text);
                 item.SubItems.Add(groupTextBox.Text);
-                mainForm.studentList.Items.Add(item);
+                //mainForm.studentList.Items.Add(item);
                 this.Close();
-            }
-        }
-
-        private void groupTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                addButton_Click(this, new EventArgs());
             }
         }
     }

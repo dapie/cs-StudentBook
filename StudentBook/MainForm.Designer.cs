@@ -46,8 +46,9 @@ namespace StudentBook
             this.studentGroup});
             this.studentList.FullRowSelect = true;
             this.studentList.GridLines = true;
+            this.studentList.HideSelection = false;
             this.studentList.Location = new System.Drawing.Point(12, 77);
-            this.studentList.Margin = new System.Windows.Forms.Padding(0, 0, 0, 0);
+            this.studentList.Margin = new System.Windows.Forms.Padding(0);
             this.studentList.MultiSelect = false;
             this.studentList.Name = "studentList";
             this.studentList.Size = new System.Drawing.Size(722, 699);
@@ -83,6 +84,7 @@ namespace StudentBook
             this.editButton.TabIndex = 2;
             this.editButton.Text = "Изменить";
             this.editButton.UseVisualStyleBackColor = true;
+            this.editButton.Click += new System.EventHandler(this.editButton_Click);
             // 
             // deleteButton
             // 
@@ -92,6 +94,7 @@ namespace StudentBook
             this.deleteButton.TabIndex = 3;
             this.deleteButton.Text = "Удалить";
             this.deleteButton.UseVisualStyleBackColor = true;
+            this.deleteButton.Click += new System.EventHandler(this.deleteButton_Click);
             // 
             // MainForm
             // 
