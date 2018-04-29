@@ -12,9 +12,16 @@ namespace StudentBook
 {
     public partial class FormEdit : Form
     {
-        public FormEdit()
+        int index;
+        MainForm mainForm;
+
+        public FormEdit(ListViewItem student, MainForm mForm)
         {
             InitializeComponent();
+            nameTextBox.Text = student.Text;
+            groupTextBox.Text = student.SubItems[1].Text;
+            index = student.Index;
+            mainForm = mForm;
         }
 
         private void editButton_Click(object sender, EventArgs e)
@@ -29,7 +36,7 @@ namespace StudentBook
             {
                 var item = new ListViewItem(nameTextBox.Text);
                 item.SubItems.Add(groupTextBox.Text);
-                //mainForm.studentList.Items.Add(item);
+                mainForm.studentList.Items[index] = item;
                 this.Close();
             }
         }

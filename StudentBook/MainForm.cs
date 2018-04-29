@@ -30,6 +30,8 @@ namespace StudentBook
             {
                 if (student.Selected)
                 {
+                    var editForm = new FormEdit(student, this);
+                    editForm.ShowDialog();
                     return;
                 }
             }
@@ -44,8 +46,11 @@ namespace StudentBook
                 if (student.Selected)
                 {
                     studentList.Items.Remove(student);
+                    return;
                 }
             }
+            var addForm = new FormError("Ничего не выделено!");
+            addForm.ShowDialog();
         }
     }
 }
